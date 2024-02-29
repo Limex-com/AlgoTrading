@@ -1,52 +1,41 @@
-# limeR: Seamless Integration with Lime Trading Broker using R
+# Limex DataHub Integration and Strategy Examples
 
-The `limeR` package provides a comprehensive suite of functions that enable seamless integration with the Lime Trading broker's trading and market data services using the R programming language. This package empowers traders and investors to efficiently manage their Lime Trading accounts, execute trades, analyze market data, and make informed trading decisions, all within the familiar R environment.
+This repository contains a collection of Jupyter notebooks written in Python and R that demonstrate how to connect to and utilize data from Limex DataHub. These resources are intended to assist data analysts, developers, and traders who wish to implement various trading strategies such as momentum or mean reversion, utilizing quality financial data.
 
-## Details
+## Introduction
 
-The `limeR` package establishes a direct connection to the Lime Trading broker's API services, enabling users to authenticate using their API credentials and access a wide range of functionalities. These functionalities include retrieving account information, managing positions, placing orders, validating orders, canceling orders, retrieving trade and transaction history, accessing real-time quotes, exploring historical market data, and more. Users can benefit from the power of Lime Trading's services while leveraging R's capabilities for data analysis and visualization.
+Limex DataHub offers a broad spectrum of financial data critical for developing and testing trading strategies. To facilitate ease and flexibility, we provide code samples that can be readily adapted to your unique requirements.
 
-The package employs HTTP-based requests to communicate with Lime Trading's API endpoints, and it takes care of authentication and authorization using the provided API key. This means users can focus on their trading strategies and data analysis without having to worry about the technical intricacies of API communication.
+## Repository Contents
 
-## Author
+connect_limex_py.ipynb: A Python Jupyter notebook that illustrates how to establish a connection with Limex DataHub.
+connect_limex_r.ipynb: An R Jupyter notebook demonstrating the method of connecting to Limex DataHub.
+momentum_strategy_py.ipynb: An example in Python of implementing the momentum strategy using data from Limex DataHub.
+mean_reversion_strategy_r.ipynb: An example in R of implementing the mean reversion strategy using data from Limex DataHub.
+Getting Started
 
-Vyacheslav Arbuzov
+To begin using these notebooks, you will need:
 
-## Installation
+An installed Python 3.x interpreter or R environment.
+The Jupyter package installed to run notebooks.
+Access to Limex DataHub.
+Detailed instructions for setting up and configuring your programming environment are contained within the respective notebooks.
 
-You can install the package using the following R code:
+How to Use These Notebooks
 
-```r
-# Install the devtools package if not already installed
-if (!require(devtools)) install.packages("devtools")
+Clone the repository to your local machine.
+Install any dependencies described in each notebook.
+Open the notebooks via Jupyter and follow the contained instructions.
+Contributing
 
-# Install the limeR package from GitHub
-devtools::install_github("arbuzovv/limeR")
-```
-## Examples
+We are open to contributions! If you have suggestions for code improvement, or if you want to add examples of new strategies, please feel free to make a pull request or open an issue.
 
-```r
-# Authenticate and retrieve access token
-token <- getToken(client_id = "your_client_id",
-                  client_secret = "your_client_secret",
-                  username = "your_username",
-                  password = "your_password")
+License
 
-# Retrieve account information
-account_info <- getAccount(api.key = token)
+[Specify License Type], see the LICENSE file in this repository for details.
 
-# Place a buy order
-order_result <- placeOrder(account = "your_account_number",
-                           api.key = token,
-                           symbol = "AAPL",
-                           quantity = 10,
-                           side = "buy")
+Contact
 
-# Retrieve real-time market data quote for a symbol
-quote_data <- getQuote(symbol = "AAPL", api.key = token)
+If you have any questions, please don't hesitate to reach out to us via [link to your support service or profile].
 
-# Fetch historical market data
-historical_data <- getHistory(symbol = "AAPL", api.key = token,
-                              start_date = "2023-07-01", end_date = "2023-07-31",
-                              period = "day")
-```
+Adjust and expand upon this template as needed to suit your project and audience. Be sure to include accurate and up-to-date information that reflects the content of your repository and is understandable to your intended users.
