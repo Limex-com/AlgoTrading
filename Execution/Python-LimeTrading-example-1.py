@@ -19,7 +19,7 @@ K_SHORT_INV = Decimal(1) - K_SHORT
 K_LONG = Decimal(2) / Decimal(PERIOD_LONG + 1)
 K_LONG_INV = Decimal(1) - K_LONG
 
-
+# to get account credentials please use link https://lime.co/
 def main():
     try:
         client = LimeClient.from_file(file_path="credentials.json")
